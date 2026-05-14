@@ -1,0 +1,24 @@
+// src/styles/_base.scss
+@use 'utils';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: utils.$font-main;
+  line-height: 1.5;
+  color: utils.$fc-main;
+  background-color: utils.$bg-main;
+
+  &.no-scroll {
+    touch-action: none;
+    overflow: hidden;
+
+    -webkit-overflow-scrolling: none;
+
+    @include utils.respond-to('desk') {
+      overflow: visible;
+    }
+  }
+}
