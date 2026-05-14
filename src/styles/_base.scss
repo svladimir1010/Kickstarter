@@ -2,7 +2,14 @@
 @use 'utils';
 
 html {
+  // Забезпечує плавне прокручування до якорів (навігація по сторінці)
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  // Запобігає появі горизонтальної смуги прокрутки при виході елементів за межі екрана
+  overflow-x: hidden;
 }
 
 body {
@@ -11,13 +18,19 @@ body {
   color: utils.$fc-main;
   background-color: utils.$bg-main;
 
+  // Клас для блокування прокрутки (наприклад, при відкритому мобільному меню або модалці)
   &.no-scroll {
+    // Вимикає будь-які жести та взаємодію з тачскріном
     touch-action: none;
+
+    // Повністю приховує прокрутку
     overflow: hidden;
 
+    // Специфічне налаштування для Safari на iOS, щоб зупинити інерційний скрол
     -webkit-overflow-scrolling: none;
 
     @include utils.respond-to('desk') {
+      // Дозволяємо прокрутку на десктопах, якщо логіка мобільного меню там не актуальна
       overflow: visible;
     }
   }
