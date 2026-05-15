@@ -6,8 +6,9 @@ html {
 }
 
 .no-scroll {
-  overflow: hidden;
   touch-action: none;
+  overflow: hidden;
+
   -webkit-overflow-scrolling: none;
 }
 
