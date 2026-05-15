@@ -1,5 +1,5 @@
 'use strict';
-
+import '../styles/main.scss';
 // ─── Мобильное меню ───────────────────────────────────────────────
 
 const burgerBtn = document.querySelector('.header__burger-btn');

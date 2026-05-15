@@ -28,7 +28,7 @@
   color: vars.$fc-main;
   text-transform: uppercase;
 
-  @media (min-width: 744 px) {
+  @media (min-width: 744px) {
     font-size: 36px;
     line-height: 46px;
   }
@@ -206,6 +206,7 @@
     border-color: vars.$c-input-selected;
     background-color: transparent;
     box-shadow: inset 0 0 0 0.5px vars.$c-input-selected;
+    transition: background-color 5000s ease-in-out 0s;
 
     &::placeholder {
       opacity: 0.5;
