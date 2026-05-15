@@ -192,18 +192,30 @@
 
   transition:
     border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 
   @include mix.text-style(14px, 500, 24px);
 
   &::placeholder {
     color: vars.$c-grey-400;
+    transition: opacity 0.3s ease;
   }
 
   &:focus {
     border-color: vars.$c-input-selected;
     background-color: transparent;
     box-shadow: inset 0 0 0 0.5px vars.$c-input-selected;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+
+    -webkit-text-fill-color: vars.$fc-main;
   }
 
   &:user-invalid {

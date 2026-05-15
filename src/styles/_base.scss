@@ -5,6 +5,12 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
 .no-scroll {
   touch-action: none;
   overflow: hidden;
@@ -13,8 +19,11 @@ html {
 }
 
 body {
+  overflow: hidden;
+
   font-family: utils.$font-main;
   line-height: 1.5;
   color: utils.$fc-main;
+
   background-color: utils.$bg-main;
 }
