@@ -10,7 +10,8 @@ const menuLinks = document.querySelectorAll('.mobile-menu__link');
 const toggleMenu = () => {
   mobileMenu.classList.toggle('mobile-menu--active');
   burgerBtn.classList.toggle('is-active');
-  document.body.classList.toggle('no-scroll');
+  document.documentElement.classList.toggle('no-scroll');
+  // document.body.classList.toggle('no-scroll');
 };
 
 burgerBtn.addEventListener('click', toggleMenu);
